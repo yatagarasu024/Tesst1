@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem da Sorte</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #4B0082;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background-color: #8A2BE2;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .button {
+            background-color: #9932CC;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #BA55D3;
+        }
+        .message {
+            display: none;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+        .stars {
+            display: none;
+            margin-top: 10px;
+        }
+        .star {
+            color: yellow;
+            font-size: 24px;
+            margin: 0 2px;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Mensagem da Sorte</h1>
+        <button class="button" onclick="showMessage()">Abrir Carta</button>
+        <div class="message" id="message">
+            니콜리, 행운을 빌어요!
+        </div>
+        <div class="stars" id="stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+            document.getElementById('stars').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
